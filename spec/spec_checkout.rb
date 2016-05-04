@@ -20,7 +20,7 @@ describe Checkout do
 
 	describe "Checkout Input" do
 		it "Returns a value of nil" do
-			@checkout.input.should be_nil
+			expect(@checkout.input).to be_nil
 		end
 	end
 end

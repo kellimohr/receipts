@@ -15,43 +15,43 @@ describe Tax do
 	end
 
 	it "should have 1 in the qty key" do
-		@tax.qty.should eql 1
+		expect(@tax.qty).to eql 1
 	end
 
 	it "should have Gun in the item key" do
-		@tax.item.should eql 'Gun'
+		expect(@tax.item).to eql 'Gun'
 	end
 
 	it "should have 150.00 in the price key" do
-		@tax.price.should eql 150.00
+		expect(@tax.price).to eql 150.00
 	end
 
 	it "should have true in the imported key" do
-		@tax.imported.should be_true
+		expect(@tax.imported).to be true
 	end
 
 	it "should not be tax exempt" do
-		@tax.taxExempt(@tax.item).should be_false
+		expect(@tax.taxExempt(@tax.item)).to be false
 	end
 
 	it "should have rounded tax of 10% = 15.00" do
-		@tax.calcTax(10).should eql 15.00
+		expect(@tax.calcTax(10)).to eql 15.00
 	end
 
 	it "should have sales tax of 15.00" do
-		@tax.addSalesTax(@tax.item, @tax.price).should eql 15.00
+		expect(@tax.addSalesTax(@tax.item, @tax.price)).to eql 15.00
 	end
 
 	it "should have imported tax of 7.5" do
-		@tax.addImportTax(@tax.imported).should eql 7.5
+		expect(@tax.addImportTax(@tax.imported)).to eql 7.5
 	end
 
 	it "should not be food item" do
-		@tax.food(@tax.item).should be_false
+		expect(@tax.food(@tax.item)).to be false
 	end
 
 	it "should not be medical product item" do
-		@tax.medicalProduct(@tax.item).should be_false
+		expect(@tax.medicalProduct(@tax.item)).to be false
 	end	
 
 end
