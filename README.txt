@@ -24,7 +24,7 @@ To run application:
 	2. Enter ruby input.rb
 
 To run unit tests:
-	1. Navigate the ReceiptProject_Mohr/spec directory in the cmd line
+	1. Navigate the receipts/spec directory in the cmd line
 	2. Enter rspec spec_checkout.rb to test the Checkout class
 	3. Enter rspec spec_tax.rb to test the Tax class
 	4. Enter rspec spec_receipt.rb to test the Receipt class
