@@ -2,6 +2,7 @@
 
 require_relative 'checkout.rb'
 
+print "\n"
 puts 'INPUT'
 print "\n"
 
@@ -67,7 +68,6 @@ input3 = {
 puts 'OUTPUT'
 print "\n"
 
-print "\n"
 puts 'Output 1:'
 cart1 = Checkout.new(input1)
 cart1.getReceipt(input1)
@@ -83,4 +83,4 @@ print "\n"
 puts 'Output 3:'
 cart3 = Checkout.new(input3)
 cart3.getReceipt(input3)
-puts ' '
+print "\n"
